@@ -1,0 +1,27 @@
+{
+  "name": "srvpro-pre-compat",
+  "version": "1.0.0",
+  "description": "SRVPro Pre-release compater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purerosefallen/srvpro-pre-compat.git"
+  },
+  "keywords": [
+    "srvpro",
+    "pre-release",
+    "ygopro"
+  ],
+  "author": "Nanahira",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/purerosefallen/srvpro-pre-compat/issues"
+  },
+  "homepage": "https://github.com/purerosefallen/srvpro-pre-compat#readme",
+  "dependencies": {
+    "sqlite3": "^4.0.9"
+  }
+}
