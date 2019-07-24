@@ -1,5 +1,4 @@
 const sqlite3 = require('sqlite3').verbose();
-const fs = require("fs");
 
 import_datas.push("is_using_pre_release");
 ygopro.i18ns["en-us"].pre_release_compat_hint = "It seems like you're a duelist with pre-release cards. The pre-release compat mode is turned on.";
