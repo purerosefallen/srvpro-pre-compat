@@ -29,7 +29,7 @@ function replace_buffer(buffer, list, start_pos) {
 
 ygopro.stoc_follow_before("JOIN_GAME", false, (buffer, info, client, server, datas) => {
 	var room = ROOM_all[client.rid];
-	if (!room && room.list_official_to_pre) {
+	if (!room || room.list_official_to_pre) {
 		return;
 	}
 	room.list_official_to_pre = {};
