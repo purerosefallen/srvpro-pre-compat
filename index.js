@@ -27,7 +27,7 @@ function replace_buffer(buffer, list, start_pos) {
 	return found;
 }
 
-ygopro.stoc_follow_before("JOIN_GAME", false, (buffer, info, client, server, datas) => {
+ygopro.stoc_follow_before("JOIN_GAME", false, async (buffer, info, client, server, datas) => {
 	var room = ROOM_all[client.rid];
 	if (!room || room.list_official_to_pre) {
 		return;
@@ -65,11 +65,11 @@ ygopro.stoc_follow_before("JOIN_GAME", false, (buffer, info, client, server, dat
 	});
 });
 
-ygopro.ctos_follow_after("PLAYER_INFO", false, (buffer, info, client, server, datas) => {
+ygopro.ctos_follow_after("PLAYER_INFO", false, async (buffer, info, client, server, datas) => {
 	client.is_using_pre_release = client.name_vpass == "COMPAT";
 });
 
-ygopro.ctos_follow_after("UPDATE_DECK", false, (buffer, info, client, server, datas) => {
+ygopro.ctos_follow_after("UPDATE_DECK", false, async (buffer, info, client, server, datas) => {
 	var room = ROOM_all[client.rid];
 	if (!room) {
 		return;
@@ -110,7 +110,7 @@ ygopro.ctos_follow_after("UPDATE_DECK", false, (buffer, info, client, server, da
 	}
 });
 
-ygopro.ctos_follow_before("RESPONSE", false, (buffer, info, client, server, datas) => { 
+ygopro.ctos_follow_before("RESPONSE", false, async (buffer, info, client, server, datas) => { 
 	var room = ROOM_all[client.rid];
 	if (!room) {
 		return;
@@ -120,7 +120,7 @@ ygopro.ctos_follow_before("RESPONSE", false, (buffer, info, client, server, data
 	}
 });
 
-ygopro.stoc_follow_before("GAME_MSG", false, (buffer, info, client, server, datas) => { 
+ygopro.stoc_follow_before("GAME_MSG", false, async (buffer, info, client, server, datas) => { 
 	var room = ROOM_all[client.rid];
 	if (!room) {
 		return;
