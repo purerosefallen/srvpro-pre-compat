@@ -95,7 +95,7 @@ ygopro.ctos_follow_after("UPDATE_DECK", false, async (buffer, info, client, serv
 	}
 	if (found) { 
 		var compat_deckbuf = buff_main_new.concat(buff_side_new);
-		var struct = ygopro.structs["deck"];
+		var struct = ygopro.structs.get("deck");
 		struct._setBuff(buffer);
 		struct.set("mainc", buff_main_new.length);
 		struct.set("sidec", buff_side_new.length);
