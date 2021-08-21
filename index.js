@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 import_datas.push("is_using_pre_release");
 ygopro.i18ns["en-us"].pre_release_compat_hint = "It seems like you're a duelist with pre-release cards. The pre-release compat mode is turned on.";
 ygopro.i18ns["zh-cn"].pre_release_compat_hint = "看起来你是使用先行卡数据的用户，已开启先行卡兼容模式。";
+ygopro.reloadI18nR()
 
 const config = require("./config.json");
 
